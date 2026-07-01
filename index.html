@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Children's Books · 100% for Save the Children</title>
+<meta name="description" content="A children's book. A simple idea. A much bigger purpose. 100% of the income from our children's books is donated to Save the Children. Find both books on Amazon in your country." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Our Children's Books · 100% for Save the Children" />
+<meta property="og:description" content="Every book bought gives another child the chance to read, learn, and dream. 100% of proceeds are donated to Save the Children." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --cream:#FFF8F0;
+    --cream-2:#FDEFE0;
+    --ink:#33302E;
+    --ink-soft:#6B655F;
+    --coral:#E4572E;
+    --coral-deep:#C6421C;
+    --red:#E2231A;      /* Save the Children red */
+    --gold:#F0A202;
+    --teal:#2A9D8F;
+    --card:#FFFFFF;
+    --shadow:0 18px 48px -18px rgba(120,60,20,.35);
+    --radius:22px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Nunito',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #FFE9D2 0%, transparent 55%),
+      radial-gradient(1000px 500px at 100% 0%, #FFDCE6 0%, transparent 45%),
+      var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;margin:0}
+
+  /* ---------- Hero ---------- */
+  header.hero{padding:76px 0 40px;text-align:center}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid #F3D9C4;color:var(--coral-deep);
+    font-weight:800;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;
+    padding:8px 16px;border-radius:999px;box-shadow:var(--shadow);
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,5.4vw,3.6rem);
+    margin:24px auto 0;max-width:16ch;
+    background:linear-gradient(120deg,var(--coral) 0%,var(--red) 60%,var(--gold) 130%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lede{
+    font-size:clamp(1.05rem,2.2vw,1.28rem);
+    color:var(--ink-soft);max-width:60ch;margin:22px auto 0;
+  }
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;
+    padding:14px 26px;border-radius:999px;text-decoration:none;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:linear-gradient(120deg,var(--coral),var(--coral-deep));color:#fff;box-shadow:var(--shadow)}
+  .btn-ghost{background:#fff;border:1px solid #F1D6C1;color:var(--coral-deep)}
+  .btn:hover{transform:translateY(-2px)}
+
+  /* ---------- Promise banner ---------- */
+  .promise{
+    margin:56px auto 0;
+    background:linear-gradient(135deg,var(--red),var(--coral) 90%);
+    color:#fff;border-radius:var(--radius);padding:38px 34px;text-align:center;
+    box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .promise .heart{font-size:2rem;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2))}
+  .promise h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin-top:10px;color:#fff}
+  .promise .big{font-weight:800}
+  .promise p{max-width:56ch;margin:14px auto 0;font-size:1.06rem;opacity:.96}
+
+  /* ---------- Story ---------- */
+  section.story{padding:64px 0 8px}
+  .story-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:760px;margin:0 auto}
+  .kicker{color:var(--coral-deep);font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:.82rem}
+  .story h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:8px 0 18px}
+  .story p{color:var(--ink-soft);font-size:1.08rem;margin:0 0 16px}
+  .story blockquote{
+    margin:22px 0;padding:18px 24px;border-left:4px solid var(--gold);
+    background:#fff;border-radius:0 16px 16px 0;box-shadow:var(--shadow);
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.18rem;color:var(--ink);
+  }
+
+  /* ---------- Books ---------- */
+  section.books{padding:52px 0 20px}
+  .books-head{text-align:center;margin-bottom:40px}
+  .books-head h2{font-size:clamp(1.9rem,4.4vw,2.7rem)}
+  .books-head p{color:var(--ink-soft);max-width:52ch;margin:12px auto 0}
+
+  .book{
+    background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:30px;margin-bottom:34px;
+    display:grid;grid-template-columns:150px 1fr;gap:30px;align-items:start;
+  }
+  .cover{
+    aspect-ratio:3/4;border-radius:14px;position:relative;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:16px;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.4);
+  }
+  .cover.b1{background:linear-gradient(150deg,#F6A21E,#E4572E)}
+  .cover.b2{background:linear-gradient(150deg,#6D9DC5,#2A9D8F)}
+  .cover .emoji{font-size:2.4rem;line-height:1}
+  .cover .ctitle{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;margin-top:10px}
+  .cover .cnum{
+    position:absolute;top:10px;left:10px;background:rgba(255,255,255,.9);color:var(--ink);
+    font-weight:800;font-size:.72rem;padding:3px 10px;border-radius:999px;letter-spacing:.03em;
+  }
+
+  .book-info h3{font-size:1.5rem}
+  .book-info .subtitle{color:var(--ink-soft);font-size:.98rem;margin:6px 0 4px}
+  .book-info .real{color:var(--ink-soft);font-size:.86rem;font-style:italic;opacity:.85}
+  .country-label{margin:18px 0 12px;font-weight:800;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--coral-deep)}
+  .countries{display:flex;flex-wrap:wrap;gap:10px}
+  .country{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    background:var(--cream);border:1px solid #F0DBC8;border-radius:999px;
+    padding:9px 15px;font-weight:700;font-size:.95rem;color:var(--ink);
+    transition:transform .13s ease,border-color .13s ease,background .13s ease;
+  }
+  .country .flag{font-size:1.15rem}
+  .country .arrow{opacity:.4;font-weight:800;transition:opacity .13s ease,transform .13s ease}
+  .country:hover{transform:translateY(-2px);border-color:var(--coral);background:#fff}
+  .country:hover .arrow{opacity:1;transform:translateX(2px)}
+
+  /* ---------- Save the Children ---------- */
+  .stc{
+    margin:40px 0 0;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:38px 34px;text-align:center;
+  }
+  .stc h2{font-size:clamp(1.5rem,3.6vw,2.1rem)}
+  .stc p{color:var(--ink-soft);max-width:60ch;margin:14px auto 0;font-size:1.06rem}
+  .stc .note{margin-top:16px;font-size:.9rem;color:var(--ink-soft);opacity:.8}
+
+  /* ---------- Footer ---------- */
+  footer{padding:56px 0 70px;text-align:center;color:var(--ink-soft)}
+  footer .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 24px}
+  footer .tag{background:#fff;border:1px solid #EEDBCB;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;color:var(--coral-deep)}
+  footer .made{font-size:.92rem}
+  footer .heart{color:var(--red)}
+
+  @media (max-width:640px){
+    .book{grid-template-columns:1fr;justify-items:center;text-align:center}
+    .book-info{width:100%}
+    .cover{width:150px}
+    .countries{justify-content:center}
+    .country-label{text-align:center}
+    header.hero{padding:54px 0 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">❤️ 100% of proceeds → Save the Children</span>
+    <h1>A children's book. A simple idea. A much bigger purpose.</h1>
+    <p class="lede">One child enjoys a new book. Another child gets a chance to discover one. Every copy you buy helps bring books to children who have none.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#books">📚 Find your book</a>
+      <a class="btn btn-ghost" href="#story">Read our story</a>
+    </div>
+
+    <div class="promise">
+      <div class="heart">❤️</div>
+      <h2><span class="big">100%</span> of the income from every children's book we publish is donated to Save the Children</h2>
+      <p>to support children's education — so every child gets the chance to read, learn, and dream.</p>
+    </div>
+  </div>
+</header>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div>
+      <div class="kicker">Why we started</div>
+      <h2>A thank-you letter that changed everything</h2>
+      <p>Last year, my wife <strong>Tripti Kumari</strong> and I published our very first children's book. We simply wanted to create something meaningful for children — something that would encourage kindness, good habits, confidence, and a love for learning.</p>
+      <p>We never imagined we'd one day receive a thank-you letter from Save the Children Germany because of it. When it arrived, one sentence stayed with us:</p>
+      <blockquote>Imagine never discovering the world of stories because there simply aren't any books to read.</blockquote>
+      <p>For many of us, books were always part of childhood. For millions of children around the world, they're still a luxury. Save the Children brings books to children in remote communities — sometimes even transporting them on horseback — so every child gets the chance to read, learn, and dream.</p>
+      <p>That reminded us why we started writing children's books in the first place. So we made a promise: <strong>100% of the income from every children's book we publish will be donated to Save the Children.</strong></p>
+      <p>If you're buying a book for your own child — or looking for a meaningful gift for a niece, nephew, grandchild, or a friend's child — we'd be honored if you chose one of ours. This is only the beginning. We're already working on more books, with the second one releasing this year.</p>
+    </div>
+  </div>
+</section>
+
+<section class="books" id="books">
+  <div class="wrap">
+    <div class="books-head">
+      <h2>📚 Our Children's Books</h2>
+      <p>Choose your country to open the book on your local Amazon store.</p>
+    </div>
+
+    <!-- Book 1 -->
+    <article class="book">
+      <div class="cover b1">
+        <span class="cnum">Book 1</span>
+        <span class="emoji">🌟</span>
+        <span class="ctitle">Good Habits &amp; Manners for Kids</span>
+      </div>
+      <div class="book-info">
+        <h3>Good Habits &amp; Manners for Kids</h3>
+        <p class="subtitle">Teach your child lasting good habits, kindness and confidence — from the very start.</p>
+        <p class="real">On Amazon as: “My first book of good habits and manners”</p>
+        <div class="country-label">Buy in your country</div>
+        <div class="countries">
+          <a class="country" href="https://www.amazon.in/dp/B0GNM11M6Q" target="_blank" rel="noopener"><span class="flag">🇮🇳</span> India <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.de/dp/B0GQQ93BWJ" target="_blank" rel="noopener"><span class="flag">🇩🇪</span> Germany <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.ie/dp/B0GQQ93BWJ" target="_blank" rel="noopener"><span class="flag">🇮🇪</span> Ireland <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.co.uk/dp/B0GQQ93BWJ" target="_blank" rel="noopener"><span class="flag">🇬🇧</span> UK <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.com/dp/B0GQQ93BWJ" target="_blank" rel="noopener"><span class="flag">🇺🇸</span> US <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.ca/dp/B0GQQ93BWJ" target="_blank" rel="noopener"><span class="flag">🇨🇦</span> Canada <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.com.au/dp/B0GQQ93BWJ" target="_blank" rel="noopener"><span class="flag">🇦🇺</span> Australia <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Book 2 -->
+    <article class="book">
+      <div class="cover b2">
+        <span class="cnum">Book 2</span>
+        <span class="emoji">🌈</span>
+        <span class="ctitle">Positive Affirmation Poems for Kids</span>
+      </div>
+      <div class="book-info">
+        <h3>Positive Affirmation Poems for Kids</h3>
+        <p class="subtitle">30 captivating black-and-white images and 30 uplifting affirmative poems to nurture confidence.</p>
+        <p class="real">On Amazon as: “Show &amp; Say to Your Baby Every Day”</p>
+        <div class="country-label">Buy in your country</div>
+        <div class="countries">
+          <a class="country" href="https://www.amazon.in/dp/B0FF68LT5J" target="_blank" rel="noopener"><span class="flag">🇮🇳</span> India <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.de/dp/B0F97WWWQJ" target="_blank" rel="noopener"><span class="flag">🇩🇪</span> Germany <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.ie/dp/B0F97WWWQJ" target="_blank" rel="noopener"><span class="flag">🇮🇪</span> Ireland <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.co.uk/dp/B0F97WWWQJ" target="_blank" rel="noopener"><span class="flag">🇬🇧</span> UK <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.com/dp/B0F97WWWQJ" target="_blank" rel="noopener"><span class="flag">🇺🇸</span> US <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.ca/dp/B0F97WWWQJ" target="_blank" rel="noopener"><span class="flag">🇨🇦</span> Canada <span class="arrow">→</span></a>
+          <a class="country" href="https://www.amazon.com.au/dp/B0F97WWWQJ" target="_blank" rel="noopener"><span class="flag">🇦🇺</span> Australia <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="stc">
+      <h2>Where every rupee, euro &amp; dollar goes</h2>
+      <p>100% of the income from these books is donated to <strong>Save the Children</strong> to support children's education around the world. Because every child deserves the opportunity to learn, read, and dream.</p>
+      <p class="note">Not affiliated with or endorsed by Save the Children — this is a personal giving promise by the authors.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="tags">
+      <span class="tag">#SaveTheChildren</span>
+      <span class="tag">#EducationForAll</span>
+      <span class="tag">#ChildrensBooks</span>
+      <span class="tag">#GivingBack</span>
+      <span class="tag">#Reading</span>
+      <span class="tag">#Literacy</span>
+      <span class="tag">#SocialImpact</span>
+      <span class="tag">#Parenting</span>
+    </div>
+    <p class="made">Made with <span class="heart">❤️</span> by Vijay &amp; Tripti Kumari — thank you to everyone who has supported us so far.</p>
+  </div>
+</footer>
+
+</body>
+</html>
